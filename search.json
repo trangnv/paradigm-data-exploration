@@ -4,25 +4,11 @@
     "href": "notebooks/explore_ethereum_contracts.html",
     "title": "Ethereum contracts Explorations",
     "section": "",
-    "text": "Code\nimport math\nimport os\nimport shutil\nimport subprocess\nimport ctc\nimport ctc.rpc\n# from ctc.toolbox import plot_utils\nimport polars as pl\nimport matplotlib.pyplot as plt\nimport toolplot\nimport numpy as np\nimport toolstr\nCode\n# setup environment\nos.chdir('../')"
+    "text": "Code\nimport math\nimport os\nimport shutil\nimport subprocess\nimport ctc\nimport ctc.rpc\n# from ctc.toolbox import plot_utils\nimport polars as pl\nimport matplotlib.pyplot as plt\nimport toolplot\nimport numpy as np\nimport toolstr"
   },
   {
     "objectID": "notebooks/explore_ethereum_contracts.html#what-data-are-we-looking-at",
     "href": "notebooks/explore_ethereum_contracts.html#what-data-are-we-looking-at",
-    "title": "Ethereum contracts Explorations",
-    "section": "1.1 What data are we looking at?",
-    "text": "1.1 What data are we looking at?\n\n\nCode\n# an example `parquet` file\ndf = pl.read_parquet('datasets/ethereum_contracts/ethereum_contracts__v1_0_0__00000000_to_00999999.parquet')\nwith pl.Config() as cfg:\n    # cfg.set_tbl_cols(-1)\n    # cfg.set_tbl_width_chars(200)\n    cfg.set_tbl_hide_dataframe_shape(True)\n    print(df.head())\n\n\n\n\nCode\n# all `parquet` files\ndata_path = '/Users/nvtrang/code/ethereum/paradigm-data-portal/datasets/ethereum_contracts/ethereum_contracts__v1_0_0__*.parquet'\ndata_path = os.path.expanduser(data_path)\n# dataset = pl.scan_parquet(data_path)\n\n\n\n\nCode\nresult = pl.scan_parquet(data_path).select(pl.col('block_number').min()).collect()\nmin_block_number = result['block_number'][0]\nmin_block_number\nprint(f'min_block_number: {min_block_number}')\n\n\n\n1.1.1 How many contract deployments have there been?\n\n\nCode\nresult = pl.scan_parquet(data_path).select(pl.col('create_index').count()).collect()\nn_deployments = result['create_index'][0]\n\nn_deployments"
-  },
-  {
-    "objectID": "notebooks/explore_ethereum_contracts_2.html",
-    "href": "notebooks/explore_ethereum_contracts_2.html",
-    "title": "Ethereum contracts Explorations",
-    "section": "",
-    "text": "Code\nimport math\nimport os\nimport shutil\nimport subprocess\nimport ctc\nimport ctc.rpc\n# from ctc.toolbox import plot_utils\nimport polars as pl\nimport matplotlib.pyplot as plt\nimport toolplot\nimport numpy as np\nimport toolstr\nCode\n# setup environment\nos.chdir('../')"
-  },
-  {
-    "objectID": "notebooks/explore_ethereum_contracts_2.html#what-data-are-we-looking-at",
-    "href": "notebooks/explore_ethereum_contracts_2.html#what-data-are-we-looking-at",
     "title": "Ethereum contracts Explorations",
     "section": "1.1 What data are we looking at?",
     "text": "1.1 What data are we looking at?\n\n\nCode\n# an example `parquet` file\ndf = pl.read_parquet('datasets/ethereum_contracts/ethereum_contracts__v1_0_0__00000000_to_00999999.parquet')\nwith pl.Config() as cfg:\n    # cfg.set_tbl_cols(-1)\n    # cfg.set_tbl_width_chars(200)\n    cfg.set_tbl_hide_dataframe_shape(True)\n    print(df.head())\n\n\n\n\nCode\n# all `parquet` files\ndata_path = '/Users/nvtrang/code/ethereum/paradigm-data-portal/datasets/ethereum_contracts/ethereum_contracts__v1_0_0__*.parquet'\ndata_path = os.path.expanduser(data_path)\n# dataset = pl.scan_parquet(data_path)\n\n\n\n\nCode\nresult = pl.scan_parquet(data_path).select(pl.col('block_number').min()).collect()\nmin_block_number = result['block_number'][0]\nmin_block_number\nprint(f'min_block_number: {min_block_number}')\n\n\n\n1.1.1 How many contract deployments have there been?\n\n\nCode\nresult = pl.scan_parquet(data_path).select(pl.col('create_index').count()).collect()\nn_deployments = result['create_index'][0]\n\nn_deployments"
