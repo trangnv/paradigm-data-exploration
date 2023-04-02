@@ -22,3 +22,5 @@ dist/*
 roadmap/*
 data/*
 extras_ignore/*
+venv/
+*/.ipynb_checkpoints
