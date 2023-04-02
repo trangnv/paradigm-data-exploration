@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.302">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Norah Jones">
+
+<title>Quarto Document</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ethereum-contracts" id="toc-ethereum-contracts" class="nav-link active" data-scroll-target="#ethereum-contracts"><span class="header-section-number">1</span> Ethereum Contracts</a>
+  <ul class="collapse">
+  <li><a href="#ethereum-contracts-by-the-numbers" id="toc-ethereum-contracts-by-the-numbers" class="nav-link" data-scroll-target="#ethereum-contracts-by-the-numbers"><span class="header-section-number">1.1</span> Ethereum contracts by the numbers</a></li>
+  </ul></li>
+  <li><a href="#lets-count-the-entites-and-events-in-the-data" id="toc-lets-count-the-entites-and-events-in-the-data" class="nav-link" data-scroll-target="#lets-count-the-entites-and-events-in-the-data"><span class="header-section-number">2</span> Let’s count the entites and events in the data…</a>
+  <ul class="collapse">
+  <li><a href="#how-many-contract-deployments-have-there-been" id="toc-how-many-contract-deployments-have-there-been" class="nav-link" data-scroll-target="#how-many-contract-deployments-have-there-been"><span class="header-section-number">2.0.1</span> How many contract deployments have there been?</a></li>
+  <li><a href="#how-many-unique-contract-addresses-have-been-deployed" id="toc-how-many-unique-contract-addresses-have-been-deployed" class="nav-link" data-scroll-target="#how-many-unique-contract-addresses-have-been-deployed"><span class="header-section-number">2.0.2</span> How many unique contract addresses have been deployed?</a></li>
+  <li><a href="#how-many-factories-have-been-used-to-create-contracts" id="toc-how-many-factories-have-been-used-to-create-contracts" class="nav-link" data-scroll-target="#how-many-factories-have-been-used-to-create-contracts"><span class="header-section-number">2.0.3</span> How many factories have been used to create contracts?</a></li>
+  <li><a href="#how-many-eoas-have-deployed-contracts" id="toc-how-many-eoas-have-deployed-contracts" class="nav-link" data-scroll-target="#how-many-eoas-have-deployed-contracts"><span class="header-section-number">2.0.4</span> How many EOAs have deployed contracts?</a></li>
+  <li><a href="#how-many-unique-contract-bytecodes-have-been-deployed" id="toc-how-many-unique-contract-bytecodes-have-been-deployed" class="nav-link" data-scroll-target="#how-many-unique-contract-bytecodes-have-been-deployed"><span class="header-section-number">2.0.5</span> How many unique contract bytecodes have been deployed?</a></li>
+  <li><a href="#how-many-contract-addresses-have-been-deployed-more-than-one-time" id="toc-how-many-contract-addresses-have-been-deployed-more-than-one-time" class="nav-link" data-scroll-target="#how-many-contract-addresses-have-been-deployed-more-than-one-time"><span class="header-section-number">2.0.6</span> How many contract addresses have been deployed more than one time?</a></li>
+  </ul></li>
+  <li><a href="#lets-look-at-some-top-10-leaderboards" id="toc-lets-look-at-some-top-10-leaderboards" class="nav-link" data-scroll-target="#lets-look-at-some-top-10-leaderboards"><span class="header-section-number">3</span> Let’s look at some top 10 leaderboards</a>
+  <ul class="collapse">
+  <li><a href="#which-eoas-have-deployed-the-most-contracts" id="toc-which-eoas-have-deployed-the-most-contracts" class="nav-link" data-scroll-target="#which-eoas-have-deployed-the-most-contracts"><span class="header-section-number">3.0.1</span> Which EOAs have deployed the most contracts?</a></li>
+  <li><a href="#which-factories-have-deployed-the-most-contracts" id="toc-which-factories-have-deployed-the-most-contracts" class="nav-link" data-scroll-target="#which-factories-have-deployed-the-most-contracts"><span class="header-section-number">3.0.2</span> Which factories have deployed the most contracts?</a></li>
+  <li><a href="#which-contract-bytecodes-are-most-common" id="toc-which-contract-bytecodes-are-most-common" class="nav-link" data-scroll-target="#which-contract-bytecodes-are-most-common"><span class="header-section-number">3.0.3</span> Which contract bytecodes are most common?</a></li>
+  <li><a href="#which-contract-addresses-have-been-deployed-the-most-number-of-times" id="toc-which-contract-addresses-have-been-deployed-the-most-number-of-times" class="nav-link" data-scroll-target="#which-contract-addresses-have-been-deployed-the-most-number-of-times"><span class="header-section-number">3.0.4</span> Which contract addresses have been deployed the most number of times?</a></li>
+  <li><a href="#what-is-the-most-contracts-deployed-in-a-single-transaction" id="toc-what-is-the-most-contracts-deployed-in-a-single-transaction" class="nav-link" data-scroll-target="#what-is-the-most-contracts-deployed-in-a-single-transaction"><span class="header-section-number">3.0.5</span> What is the most contracts deployed in a single transaction?</a></li>
+  <li><a href="#which-contracts-have-the-most-leading-zeros" id="toc-which-contracts-have-the-most-leading-zeros" class="nav-link" data-scroll-target="#which-contracts-have-the-most-leading-zeros"><span class="header-section-number">3.0.6</span> Which contracts have the most leading zeros?</a></li>
+  </ul></li>
+  <li><a href="#we-can-also-perform-targeted-queries" id="toc-we-can-also-perform-targeted-queries" class="nav-link" data-scroll-target="#we-can-also-perform-targeted-queries"><span class="header-section-number">4</span> We can also perform targeted queries</a>
+  <ul class="collapse">
+  <li><a href="#who-deployed-this-contract-when-what-was-the-creation-transaction" id="toc-who-deployed-this-contract-when-what-was-the-creation-transaction" class="nav-link" data-scroll-target="#who-deployed-this-contract-when-what-was-the-creation-transaction"><span class="header-section-number">4.0.1</span> Who deployed this contract? When? What was the creation transaction?</a></li>
+  <li><a href="#what-are-all-of-the-deployed-uniswap-v2-pools" id="toc-what-are-all-of-the-deployed-uniswap-v2-pools" class="nav-link" data-scroll-target="#what-are-all-of-the-deployed-uniswap-v2-pools"><span class="header-section-number">4.0.2</span> What are all of the deployed Uniswap V2 pools?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quarto Document</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Norah Jones </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="ethereum-contracts" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Ethereum Contracts</h1>
+<p>This notebook demonstrates how to use the <code>ethereum_contracts</code> dataset to answer questions about the history of contracts on Ethereum.</p>
+<p>Additional information about this dataset can be found <a href="https://github.com/paradigmxyz/paradigm-data-portal/tree/main/datasets/ethereum_contracts">here</a></p>
+<p>The examples below use <a href="https://github.com/pola-rs/polars">polars</a> library to read the files directly without needing to import them to a database. Polars is also used in streaming mode, so that the dataset does not need to fit into memory.</p>
+<section id="ethereum-contracts-by-the-numbers" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="ethereum-contracts-by-the-numbers"><span class="header-section-number">1.1</span> Ethereum contracts by the numbers</h2>
+<p>All of these fun facts are computed in the examples below:</p>
+<pre><code>- 20% of all ethereum contracts have been deployed by just 10 EOAs
+- 49% of all ethereum contracts have been created by just 10 factories
+- 56% of all ethereum contracts use just 10 bytecode templates
+- 0.46% of ethereum addresses have been deployed more than once
+- The most times that a single contract address has been deployed is 848
+- The most contracts deployed in a single transaction or block is 701
+- 57M contracts have been deployed by 4.2M EOAs using 492K factories
+- Only 878K unique contracts have been deployed
+- The most leading zeros in a contract address is 14, of which there are 2 contracts</code></pre>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:37:40.163071Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:39.574478Z&quot;}" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> subprocess</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ctc</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ctc.rpc</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># from ctc.toolbox import plot_utils</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> toolplot</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> toolstr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:37:40.165873Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:40.164035Z&quot;}" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set up env</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># plot_utils.set_column_display_width()</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data_path <span class="op">=</span> <span class="st">'/Users/nvtrang/code/ethereum/paradigm-data-portal/datasets/ethereum_contracts/ethereum_contracts__v1_0_0__*.parquet'</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>data_path <span class="op">=</span> os.path.expanduser(data_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="lets-count-the-entites-and-events-in-the-data" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Let’s count the entites and events in the data…</h1>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:37:40.169216Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:40.167367Z&quot;}" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_unique_column_count(column):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> pl.scan_parquet(data_path).select(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        pl.col(column).n_unique(),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    ).collect(streaming<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result[column][<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="how-many-contract-deployments-have-there-been" class="level3" data-number="2.0.1">
+<h3 data-number="2.0.1" class="anchored" data-anchor-id="how-many-contract-deployments-have-there-been"><span class="header-section-number">2.0.1</span> How many contract deployments have there been?</h3>
+<p>57887821</p>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:37:40.337997Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:40.170346Z&quot;}" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> pl.scan_parquet(data_path).select(pl.col(<span class="st">'create_index'</span>).count()).collect()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>n_deployments <span class="op">=</span> result[<span class="st">'create_index'</span>][<span class="dv">0</span>]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>n_deployments</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>57887821</code></pre>
+</div>
+</div>
+</section>
+<section id="how-many-unique-contract-addresses-have-been-deployed" class="level3" data-number="2.0.2">
+<h3 data-number="2.0.2" class="anchored" data-anchor-id="how-many-unique-contract-addresses-have-been-deployed"><span class="header-section-number">2.0.2</span> How many unique contract addresses have been deployed?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:37:45.994489Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:40.338942Z&quot;}" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>n_unique_contract_addresses <span class="op">=</span> get_unique_column_count(<span class="st">'contract_address'</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>n_unique_contract_addresses</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>57314368</code></pre>
+</div>
+</div>
+</section>
+<section id="how-many-factories-have-been-used-to-create-contracts" class="level3" data-number="2.0.3">
+<h3 data-number="2.0.3" class="anchored" data-anchor-id="how-many-factories-have-been-used-to-create-contracts"><span class="header-section-number">2.0.3</span> How many factories have been used to create contracts?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:37:47.417752Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:45.995334Z&quot;}" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>get_unique_column_count(<span class="st">'factory'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>491663</code></pre>
+</div>
+</div>
+</section>
+<section id="how-many-eoas-have-deployed-contracts" class="level3" data-number="2.0.4">
+<h3 data-number="2.0.4" class="anchored" data-anchor-id="how-many-eoas-have-deployed-contracts"><span class="header-section-number">2.0.4</span> How many EOAs have deployed contracts?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:37:49.222589Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:47.418595Z&quot;}" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>get_unique_column_count(<span class="st">'deployer'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>4228306</code></pre>
+</div>
+</div>
+</section>
+<section id="how-many-unique-contract-bytecodes-have-been-deployed" class="level3" data-number="2.0.5">
+<h3 data-number="2.0.5" class="anchored" data-anchor-id="how-many-unique-contract-bytecodes-have-been-deployed"><span class="header-section-number">2.0.5</span> How many unique contract bytecodes have been deployed?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:37:50.801194Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:49.223456Z&quot;}" data-execution_count="8">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>get_unique_column_count(<span class="st">'code_hash'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>878235</code></pre>
+</div>
+</div>
+</section>
+<section id="how-many-contract-addresses-have-been-deployed-more-than-one-time" class="level3" data-number="2.0.6">
+<h3 data-number="2.0.6" class="anchored" data-anchor-id="how-many-contract-addresses-have-been-deployed-more-than-one-time"><span class="header-section-number">2.0.6</span> How many contract addresses have been deployed more than one time?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:37:59.350041Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:50.803493Z&quot;}" data-execution_count="9">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>n_deployed_more_than_once <span class="op">=</span> (</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    pl.scan_parquet(data_path)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    .groupby(pl.col(<span class="st">"contract_address"</span>))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    .agg(pl.count())</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>(pl.col(<span class="st">'count'</span>) <span class="op">&gt;</span> <span class="dv">1</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    .select(pl.count())</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    .collect(streaming<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>).rows()[<span class="dv">0</span>][<span class="dv">0</span>]</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>n_deployed_more_than_once</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>PARTITIONED DS: estimated cardinality: 1 exceeded the boundary: 0.4, running default HASH AGGREGATION</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>265431</code></pre>
+</div>
+</div>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:37:59.353187Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:59.350984Z&quot;}" data-execution_count="10">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>more_than_once_percent <span class="op">=</span> toolstr.<span class="bu">format</span>(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    n_deployed_more_than_once <span class="op">/</span> n_unique_contract_addresses,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    percentage<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    decimals<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(more_than_once_percent, <span class="st">'of contract addresses have been deployed more than once'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.46% of contract addresses have been deployed more than once</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="lets-look-at-some-top-10-leaderboards" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Let’s look at some top 10 leaderboards</h1>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:37:59.356539Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:59.354132Z&quot;}" data-execution_count="11">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_top_n(column, n):</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    col <span class="op">=</span> <span class="st">'0x'</span> <span class="op">+</span> (pl.col(column).struct.field(column).<span class="bu">bin</span>.encode(<span class="st">'hex'</span>))</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>        pl.scan_parquet(data_path)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>        .select(pl.col(column).value_counts())</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>        .select([col.alias(column), pl.col(column).struct.field(<span class="st">'counts'</span>)])</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>        .sort(<span class="st">'counts'</span>, descending<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>        .head(n)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>        .collect(streaming<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="which-eoas-have-deployed-the-most-contracts" class="level3" data-number="3.0.1">
+<h3 data-number="3.0.1" class="anchored" data-anchor-id="which-eoas-have-deployed-the-most-contracts"><span class="header-section-number">3.0.1</span> Which EOAs have deployed the most contracts?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:02.583756Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:37:59.357442Z&quot;}" data-scrolled="true" data-execution_count="12">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>top_10_deployers <span class="op">=</span> get_top_n(<span class="st">'deployer'</span>, <span class="dv">10</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>top_10_deployers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<div><style>
+.dataframe > thead > tr > th,
+.dataframe > tbody > tr > td {
+  text-align: right;
+}
+</style>
+<small>shape: (10, 2)</small>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">deployer</th>
+<th data-quarto-table-cell-role="th">counts</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>u32</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"0xffff46e05a09314daae9176fc32dba0f4172dcdb"</td>
+<td>2854163</td>
+</tr>
+<tr class="even">
+<td>"0xe5c99b740572c2dabf7e3a418c4e9df2f793a599"</td>
+<td>1822822</td>
+</tr>
+<tr class="odd">
+<td>"0x6cace0528324a8afc2b157ceba3cdd2a27c4e21f"</td>
+<td>1579922</td>
+</tr>
+<tr class="even">
+<td>"0x5f5a901463fbffeca2b4dfad613bc49e445467cd"</td>
+<td>954224</td>
+</tr>
+<tr class="odd">
+<td>"0xf24c621e5108607f4ec60e9c4f91719a76c7b3c9"</td>
+<td>952859</td>
+</tr>
+<tr class="even">
+<td>"0x9901c66f2d4b95f7074b553da78084d708beca70"</td>
+<td>801294</td>
+</tr>
+<tr class="odd">
+<td>"0xfc9161b4ca1e5db6fecf7d914a73c95ac969b7b9"</td>
+<td>665752</td>
+</tr>
+<tr class="even">
+<td>"0x2aab3ddd93ededc4d4275bef3e4f4d2ca95e0008"</td>
+<td>600176</td>
+</tr>
+<tr class="odd">
+<td>"0x06ca51ab3c82c4a834872ebff806a9a78e2aea47"</td>
+<td>542637</td>
+</tr>
+<tr class="even">
+<td>"0xddd26c200bf6dbb775a9d91fc24b5ece5be7a45f"</td>
+<td>529780</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:02.586682Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:02.584645Z&quot;}" data-execution_count="13">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>top_10_deployer_percent <span class="op">=</span> toolstr.<span class="bu">format</span>(</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    top_10_deployers[<span class="st">'counts'</span>].<span class="bu">sum</span>() <span class="op">/</span> n_deployments,</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    percentage<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    decimals<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The top 10 deployers have deployed'</span>, top_10_deployer_percent, <span class="st">'of all contracts on Ethereum'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The top 10 deployers have deployed 19.5% of all contracts on Ethereum</code></pre>
+</div>
+</div>
+</section>
+<section id="which-factories-have-deployed-the-most-contracts" class="level3" data-number="3.0.2">
+<h3 data-number="3.0.2" class="anchored" data-anchor-id="which-factories-have-deployed-the-most-contracts"><span class="header-section-number">3.0.2</span> Which factories have deployed the most contracts?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:04.413081Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:02.587389Z&quot;}" data-execution_count="14">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>top_10_factories <span class="op">=</span> get_top_n(<span class="st">'factory'</span>, <span class="dv">10</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>top_10_factories</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<div><style>
+.dataframe > thead > tr > th,
+.dataframe > tbody > tr > td {
+  text-align: right;
+}
+</style>
+<small>shape: (10, 2)</small>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">factory</th>
+<th data-quarto-table-cell-role="th">counts</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>u32</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"0x0000000000004946c0e9f43f4dee607b0ef1fa1c"</td>
+<td>10364776</td>
+</tr>
+<tr class="even">
+<td>"0x0000000000b3f879cb30fe243b4dfee438691c04"</td>
+<td>6493824</td>
+</tr>
+<tr class="odd">
+<td>"0x0de8bf93da2f7eecb3d9169422413a9bef4ef628"</td>
+<td>2324361</td>
+</tr>
+<tr class="even">
+<td>"0x0000000000007f150bd6f54c40a34d7c3d5e9f56"</td>
+<td>1647068</td>
+</tr>
+<tr class="odd">
+<td>"0xa3c1e324ca1ce40db73ed6026c4a177f099b5770"</td>
+<td>1586334</td>
+</tr>
+<tr class="even">
+<td>"0xa5409ec958c83c3f309868babaca7c86dcb077c1"</td>
+<td>1552418</td>
+</tr>
+<tr class="odd">
+<td>"0x8a91c9a16cd62693649d80afa85a09dbbdcb8508"</td>
+<td>1088378</td>
+</tr>
+<tr class="even">
+<td>"0x0a252663dbcc0b073063d6420a40319e438cfa59"</td>
+<td>1021675</td>
+</tr>
+<tr class="odd">
+<td>"0x881d4032abe4188e2237efcd27ab435e81fc6bb1"</td>
+<td>994275</td>
+</tr>
+<tr class="even">
+<td>"0x46d781c076596e1836f62461f150f387ad140c0e"</td>
+<td>952859</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:04.416040Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:04.414078Z&quot;}" data-execution_count="15">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>top_10_factory_percent <span class="op">=</span> toolstr.<span class="bu">format</span>(</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    top_10_factories[<span class="st">'counts'</span>].<span class="bu">sum</span>() <span class="op">/</span> n_deployments,</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    percentage<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    decimals<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The top 10 factories have deployed'</span>, top_10_factory_percent, <span class="st">'of all contracts on Ethereum'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The top 10 factories have deployed 48.4% of all contracts on Ethereum</code></pre>
+</div>
+</div>
+</section>
+<section id="which-contract-bytecodes-are-most-common" class="level3" data-number="3.0.3">
+<h3 data-number="3.0.3" class="anchored" data-anchor-id="which-contract-bytecodes-are-most-common"><span class="header-section-number">3.0.3</span> Which contract bytecodes are most common?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:06.506449Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:04.416917Z&quot;}" data-execution_count="16">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>top_10_bytecodes <span class="op">=</span> get_top_n(<span class="st">"code_hash"</span>, <span class="dv">10</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>top_10_bytecodes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<div><style>
+.dataframe > thead > tr > th,
+.dataframe > tbody > tr > td {
+  text-align: right;
+}
+</style>
+<small>shape: (10, 2)</small>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">code_hash</th>
+<th data-quarto-table-cell-role="th">counts</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>u32</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"0x1d93f60f105899172f7255c030301c3af4564edd4a48577dbdc448aec7ddb0ac"</td>
+<td>10365216</td>
+</tr>
+<tr class="even">
+<td>"0xd80cd839dd3957d572b90780ada202a13936fa2875daea94216263371e9ef1d2"</td>
+<td>6494337</td>
+</tr>
+<tr class="odd">
+<td>"0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"</td>
+<td>4853969</td>
+</tr>
+<tr class="even">
+<td>"0x562d59a51820d47f520c975e0b2bcffac644a509749a3161f481f57b6e826d21"</td>
+<td>2324361</td>
+</tr>
+<tr class="odd">
+<td>"0x8f789d24f75f80df63f1d69c18963fb4c2dea81ade3b780fd0c886e4d1fabc4a"</td>
+<td>1647068</td>
+</tr>
+<tr class="even">
+<td>"0xce33220d5c7f0d09d75ceff76c05863c5e7d6e801c70dfe7d5d45d4c44e80654"</td>
+<td>1595657</td>
+</tr>
+<tr class="odd">
+<td>"0x99c99f1a6d65a9097e0f8ca61683878ed26099e347359f5cdc600bd194dbe908"</td>
+<td>1548789</td>
+</tr>
+<tr class="even">
+<td>"0x647d5d7eb5af6fbf9ed95320cadf658cec3819ffa536adc7b6387fdf1b72123d"</td>
+<td>1542104</td>
+</tr>
+<tr class="odd">
+<td>"0x2df39c0062882ba634fb24c89e7f9871ecef10a6e6a6e79a336f6ed463d5c942"</td>
+<td>1175582</td>
+</tr>
+<tr class="even">
+<td>"0x905982d3bc98b3ad75d5ca7a92446cc8923fae39a2352245000f9d3e9dc0f3ee"</td>
+<td>1088378</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:06.509533Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:06.507328Z&quot;}" data-execution_count="17">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>top_10_bytecode_percent <span class="op">=</span> toolstr.<span class="bu">format</span>(</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    top_10_bytecodes[<span class="st">'counts'</span>].<span class="bu">sum</span>() <span class="op">/</span> n_deployments,</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    percentage<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    decimals<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The top 10 bytecodes represent'</span>, top_10_bytecode_percent, <span class="st">'of all contracts on Ethereum'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The top 10 bytecodes represent 56.4% of all contracts on Ethereum</code></pre>
+</div>
+</div>
+</section>
+<section id="which-contract-addresses-have-been-deployed-the-most-number-of-times" class="level3" data-number="3.0.4">
+<h3 data-number="3.0.4" class="anchored" data-anchor-id="which-contract-addresses-have-been-deployed-the-most-number-of-times"><span class="header-section-number">3.0.4</span> Which contract addresses have been deployed the most number of times?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:23.759200Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:06.510712Z&quot;}" data-execution_count="18">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>top_10_contract_addresses <span class="op">=</span> get_top_n(<span class="st">'contract_address'</span>, <span class="dv">10</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>top_10_contract_addresses</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<div><style>
+.dataframe > thead > tr > th,
+.dataframe > tbody > tr > td {
+  text-align: right;
+}
+</style>
+<small>shape: (10, 2)</small>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">contract_address</th>
+<th data-quarto-table-cell-role="th">counts</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>u32</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"0xba4ac7aadfa00003a20c954e077d5c81994c8ece"</td>
+<td>848</td>
+</tr>
+<tr class="even">
+<td>"0x9c14d5cb81d576e97874b593bffdee670347bfd6"</td>
+<td>843</td>
+</tr>
+<tr class="odd">
+<td>"0xa46ec029df976770a75b2ce42fd4276ddc26a961"</td>
+<td>818</td>
+</tr>
+<tr class="even">
+<td>"0x08bd3b769ffd7992e1d14101a2235eeff7232c57"</td>
+<td>817</td>
+</tr>
+<tr class="odd">
+<td>"0x3e2d8eabd99bc994d2ab4a804c6f804120af123e"</td>
+<td>743</td>
+</tr>
+<tr class="even">
+<td>"0x71664ea68d994fb064aed08807257b2c6dfbd65d"</td>
+<td>730</td>
+</tr>
+<tr class="odd">
+<td>"0x472875a6fde6cc05b53e58f7e7064d5add45c4bf"</td>
+<td>729</td>
+</tr>
+<tr class="even">
+<td>"0x8a454242940937c95dffb7b038fe27b61817f036"</td>
+<td>497</td>
+</tr>
+<tr class="odd">
+<td>"0x19486d3a1da8cfeb4cd19c9c4fe5624a6587673c"</td>
+<td>496</td>
+</tr>
+<tr class="even">
+<td>"0x43adca66ac4d4037e4b5403bbe76fb25f33016c7"</td>
+<td>488</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-the-most-contracts-deployed-in-a-single-transaction" class="level3" data-number="3.0.5">
+<h3 data-number="3.0.5" class="anchored" data-anchor-id="what-is-the-most-contracts-deployed-in-a-single-transaction"><span class="header-section-number">3.0.5</span> What is the most contracts deployed in a single transaction?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:32.266084Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:23.760103Z&quot;}" data-execution_count="19">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>top_10_transactions <span class="op">=</span> get_top_n(<span class="st">'transaction_hash'</span>, <span class="dv">10</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>top_10_transactions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<div><style>
+.dataframe > thead > tr > th,
+.dataframe > tbody > tr > td {
+  text-align: right;
+}
+</style>
+<small>shape: (10, 2)</small>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">transaction_hash</th>
+<th data-quarto-table-cell-role="th">counts</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>u32</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"0x81ab1942007f36adf8a8b5930e1b0e5e9f9880dca65e972a43b13be51cfe4ad4"</td>
+<td>701</td>
+</tr>
+<tr class="even">
+<td>"0x46e7884e8a8d6663135d36a80ab0a9ee2bd286e6f82e4a359c7a2a7841224298"</td>
+<td>701</td>
+</tr>
+<tr class="odd">
+<td>"0x394937bc18f92f976faba76bf816b9da53d3708d14c71423ec490bbb7820b627"</td>
+<td>700</td>
+</tr>
+<tr class="even">
+<td>"0x0fab831e2808129816a241472e64f9b680d6035326e696391c28acea4eb908ba"</td>
+<td>700</td>
+</tr>
+<tr class="odd">
+<td>"0xc92a2a570ee0048da8779a75ac2c8b98d1d0af49683aa92e46bb844899be1dc9"</td>
+<td>700</td>
+</tr>
+<tr class="even">
+<td>"0x00a1f4b87db8f9e16f3912a8099580a6293805a95fb45f0d8d8ab50b685a8daa"</td>
+<td>700</td>
+</tr>
+<tr class="odd">
+<td>"0xeb5b8ead45667b9d1e0fbbf0eefec4122235afacee05aace04ca71b9b2f501ed"</td>
+<td>700</td>
+</tr>
+<tr class="even">
+<td>"0x809ffb6ef139520603e4a5d620a9e501e5a885486bb3e6b1ddc8b49fe759cbfe"</td>
+<td>700</td>
+</tr>
+<tr class="odd">
+<td>"0x044eae45065067a8dc42280ed50bbbf00537bc8a68de2e516e0206a28bab1878"</td>
+<td>700</td>
+</tr>
+<tr class="even">
+<td>"0xaa1a5d776d07f66fa943747ee2f7229a5ae9eba34400119285e486278ace4e4e"</td>
+<td>700</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="which-contracts-have-the-most-leading-zeros" class="level3" data-number="3.0.6">
+<h3 data-number="3.0.6" class="anchored" data-anchor-id="which-contracts-have-the-most-leading-zeros"><span class="header-section-number">3.0.6</span> Which contracts have the most leading zeros?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:40.830127Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:32.267245Z&quot;}" data-execution_count="20">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>sorted_contracts <span class="op">=</span> (</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    pl.scan_parquet(data_path)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    .select(pl.col(<span class="st">'contract_address'</span>))</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    .sort(<span class="st">'contract_address'</span>)</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    .unique()</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    .head(<span class="dv">10</span>)</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>    .collect(streaming<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>)[<span class="st">'contract_address'</span>]</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> binary_address <span class="kw">in</span> sorted_contracts:</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>    address <span class="op">=</span> ctc.binary_convert(binary_address, <span class="st">'prefix_hex'</span>)</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(address, <span class="dv">40</span> <span class="op">-</span> <span class="bu">len</span>(address.lstrip(<span class="st">'0x'</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>0x000000000000005394b1ed7aa43cc33358517d24 14
+0x000000000000006f6502b7f2bbac8c30a3f67e9a 14
+0x00000000000001ad428e4906ae43d8f9852d0dd6 13
+0x00000000000003441d59dde9a90bffb1cd3fabf1 13
+0x00000000000003c98e6a44a835cb776385bed207 13
+0x00000000000006c7676171937c444f6bde3d6282 13
+0x000000000000073760fc462304360d9e887e4ef4 13
+0x000000000000084e91743124a982076c59f10084 13
+0x000000000000093dfd365e70a598de99c41ec840 13
+0x0000000000000ad24e80fd803c6ac37206a45f15 13</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="we-can-also-perform-targeted-queries" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> We can also perform targeted queries</h1>
+<section id="who-deployed-this-contract-when-what-was-the-creation-transaction" class="level3" data-number="4.0.1">
+<h3 data-number="4.0.1" class="anchored" data-anchor-id="who-deployed-this-contract-when-what-was-the-creation-transaction"><span class="header-section-number">4.0.1</span> Who deployed this contract? When? What was the creation transaction?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:40.832894Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:40.831239Z&quot;}" data-execution_count="21">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>DAI <span class="op">=</span> <span class="st">'0x6b175474e89094c44da98b954eedeac495271d0f'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:57.220691Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:40.833801Z&quot;}" data-execution_count="22">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>binary_address <span class="op">=</span> ctc.binary_convert(DAI, <span class="st">'binary'</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> (</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    pl.scan_parquet(data_path)</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>(pl.col(<span class="st">'contract_address'</span>) <span class="op">==</span> binary_address)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    .collect(streaming<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>pl_utils.binary_columns_to_prefix_hex(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>STREAMING CHUNK SIZE: 40000 rows</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<div><style>
+.dataframe > thead > tr > th,
+.dataframe > tbody > tr > td {
+  text-align: right;
+}
+</style>
+<small>shape: (1, 10)</small>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">block_number</th>
+<th data-quarto-table-cell-role="th">create_index</th>
+<th data-quarto-table-cell-role="th">transaction_hash</th>
+<th data-quarto-table-cell-role="th">contract_address</th>
+<th data-quarto-table-cell-role="th">deployer</th>
+<th data-quarto-table-cell-role="th">factory</th>
+<th data-quarto-table-cell-role="th">init_code</th>
+<th data-quarto-table-cell-role="th">code</th>
+<th data-quarto-table-cell-role="th">init_code_hash</th>
+<th data-quarto-table-cell-role="th">code_hash</th>
+</tr>
+<tr class="odd">
+<th>i64</th>
+<th>i64</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8928158</td>
+<td>0</td>
+<td>"0x495402df7d45fe36329b0bd94487f49baee62026d50f654600f6771bd2a596ab"</td>
+<td>"0x6b175474e89094c44da98b954eedeac495271d0f"</td>
+<td>"0xddb108893104de4e1c6d0e47c42237db4e617acc"</td>
+<td>"0xb5b06a16621616875a6c2637948bf98ea57c58fa"</td>
+<td>"0x608060405234801561001057600080fd5b506040516120d33803806120d38339818...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101425760003560e01c806...</td>
+<td>"0xa24ab178906449d0fd98af1310988221249de763de7f661bce0b613010689770"</td>
+<td>"0x4e36f96ee1667a663dfaac57c4d185a0e369a3a217e0079d49620f34f85d1ac7"</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="what-are-all-of-the-deployed-uniswap-v2-pools" class="level3" data-number="4.0.2">
+<h3 data-number="4.0.2" class="anchored" data-anchor-id="what-are-all-of-the-deployed-uniswap-v2-pools"><span class="header-section-number">4.0.2</span> What are all of the deployed Uniswap V2 pools?</h3>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:38:57.223072Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:57.221515Z&quot;}" data-execution_count="23">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>example_pool <span class="op">=</span> <span class="st">'0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-03-17T08:39:22.997491Z&quot;,&quot;start_time&quot;:&quot;2023-03-17T08:38:57.223827Z&quot;}" data-execution_count="24">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>example_bytecode <span class="op">=</span> <span class="cf">await</span> ctc.rpc.async_eth_get_code(example_pool)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>example_code_hash <span class="op">=</span> ctc.keccak(example_bytecode, output_format<span class="op">=</span><span class="st">'binary'</span>)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> (</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>    pl.scan_parquet(data_path)</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>(pl.col(<span class="st">'code_hash'</span>) <span class="op">==</span> example_code_hash)</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>    .collect(streaming<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>pl_utils.binary_columns_to_prefix_hex(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>STREAMING CHUNK SIZE: 40000 rows</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="24">
+<div><style>
+.dataframe > thead > tr > th,
+.dataframe > tbody > tr > td {
+  text-align: right;
+}
+</style>
+<small>shape: (151776, 10)</small>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">block_number</th>
+<th data-quarto-table-cell-role="th">create_index</th>
+<th data-quarto-table-cell-role="th">transaction_hash</th>
+<th data-quarto-table-cell-role="th">contract_address</th>
+<th data-quarto-table-cell-role="th">deployer</th>
+<th data-quarto-table-cell-role="th">factory</th>
+<th data-quarto-table-cell-role="th">init_code</th>
+<th data-quarto-table-cell-role="th">code</th>
+<th data-quarto-table-cell-role="th">init_code_hash</th>
+<th data-quarto-table-cell-role="th">code_hash</th>
+</tr>
+<tr class="odd">
+<th>i64</th>
+<th>i64</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10008355</td>
+<td>14</td>
+<td>"0xd07cbde817318492092cc7a27b3064a69bd893c01cb593d6029683ffd290ab3a"</td>
+<td>"0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc"</td>
+<td>"0xf94e5cdf41247e268d4847c30a0dc2893b33e85d"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="even">
+<td>10008500</td>
+<td>0</td>
+<td>"0xb0621ca74cee9f540dda6d575f6a7b876133b42684c1259aaeb59c831410ccb2"</td>
+<td>"0x3139ffc91b99aa94da8a2dc13f1fc36f9bdc98ee"</td>
+<td>"0x3a5a935b58901c25234fc481574bb7fde5135393"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>10014178</td>
+<td>4</td>
+<td>"0x98f92a0b6063b0b581722cecf8ef01131c24c4377e6d3323d9184d1a262fc168"</td>
+<td>"0x12ede161c702d1494612d19f05992f43aa6a26fb"</td>
+<td>"0x8688a84fcfd84d8f78020d0fc0b35987cc58911f"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="even">
+<td>10042267</td>
+<td>0</td>
+<td>"0xc4c1840db940f5075c5404266efe50d7c65bc079f318ab8e5a10b8a432b49d30"</td>
+<td>"0xa478c2975ab1ea89e8196811f51a7b7ade33eb11"</td>
+<td>"0x74aa01d162e6dc6a657cac857418c403d48e2d77"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>10060679</td>
+<td>0</td>
+<td>"0xee29b2a9306dab868b53919836c4a81feca435de6902c230c291b576ec9fa680"</td>
+<td>"0x07f068ca326a469fc1d87d85d448990c8cba7df9"</td>
+<td>"0xb96abc18d24eeda781f83be55ed737056965944b"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="even">
+<td>10060832</td>
+<td>0</td>
+<td>"0x966e4e9acaac28e44aafc937918718bc66804a3c94ac656e5e57faedd314c947"</td>
+<td>"0xae461ca67b15dc8dc81ce7615e0320da1a9ab8d5"</td>
+<td>"0x8688a84fcfd84d8f78020d0fc0b35987cc58911f"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>10061003</td>
+<td>1</td>
+<td>"0x2e150ec518660ada856c2c57689bb45c5600bdbd38fc58043d99e99d7a031f83"</td>
+<td>"0xce407cd7b95b39d3b4d53065e711e713dd5c5999"</td>
+<td>"0x11e4857bb9993a50c685a79afad4e6f65d518dda"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="even">
+<td>10061271</td>
+<td>0</td>
+<td>"0x9dca7318a5ebb0a585bbb5749f1d4d4dd1aa93bfae896cd53ba50cf1693d22e0"</td>
+<td>"0x33c2d48bc95fb7d0199c5c693e7a9f527145a9af"</td>
+<td>"0x66666600e43c6d9e1a249d29d58639dedfcd9ade"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>10061933</td>
+<td>0</td>
+<td>"0xbbc3b17a6a526c8fedbfac38c70c1ab69a67f15dbbe0cd32e874f5687c4ac5fb"</td>
+<td>"0xb6909b960dbbe7392d405429eb2b3649752b4838"</td>
+<td>"0x74aa01d162e6dc6a657cac857418c403d48e2d77"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="even">
+<td>10091031</td>
+<td>0</td>
+<td>"0x2b17e2c3328c27788e0e6c3673ce1c35ad70df2c634afbee03826de53f4a05b0"</td>
+<td>"0x30eb5e15476e6a80f4f3cd8479749b4881dab1b8"</td>
+<td>"0xa5b65d4a68c1c71aae3910199f4ab266f726afbf"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>10091097</td>
+<td>0</td>
+<td>"0x7578a3b32f0c884422126d606098d164eca40d0e51bae3d997bb993cc1646b13"</td>
+<td>"0xbb2b8038a1640196fbe3e38816f3e67cba72d940"</td>
+<td>"0x6f1821a5fa09c0d1c833ba714f4adae3c8a8edd9"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="even">
+<td>10091280</td>
+<td>0</td>
+<td>"0x293e16ca56cd8dda304a6263ce6ac9d3b4ebbed3750fce96dda9d6f93e2bed99"</td>
+<td>"0x9896bd979f9da57857322cc15e154222c4658a5a"</td>
+<td>"0x11e4857bb9993a50c685a79afad4e6f65d518dda"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="even">
+<td>16799705</td>
+<td>1</td>
+<td>"0x2452f9e0b2506c2e88195a1807c02f81afe29fc01f8a31f7920c84e54efbd893"</td>
+<td>"0x41b625115929c09f800a1c0f4ab5123f6da9b434"</td>
+<td>"0xf99a74cfdd1debb46087e78117351963f3a0f3b0"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>16799758</td>
+<td>1</td>
+<td>"0xc1ece6e16bdc507351828acea4638f9cf433e3785ba20bb8ee3aa6509e0566ba"</td>
+<td>"0xa8c6d9bc05dafb6ae800381a6c5cac3bd7c8fefc"</td>
+<td>"0x89d2700d753a0ee3b1020726ba5f3a88ddbef0e8"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="even">
+<td>16799817</td>
+<td>1</td>
+<td>"0x8da57fa57a7697fa04e89831727abf7e6da79a6e6624ee0604191cd0fd3df411"</td>
+<td>"0x74239f995a22778a8454d193541515a33018efd9"</td>
+<td>"0x952054a0752b67815222cb7edeab0f02a17d9169"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>16799817</td>
+<td>3</td>
+<td>"0x2a03ebceb8afc732d18523b0f694f534a61fad736a51356dd49a69b7f5ec1c58"</td>
+<td>"0xac4a1764dbcb537ca55de08c0bd03526312866d8"</td>
+<td>"0xf5b87f2d9eb0923a8f274c277cc96429d375321f"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="even">
+<td>16799830</td>
+<td>1</td>
+<td>"0x6f68b7122c9b13594038c2fb2681a50af024715abcfa53121e9d0aeb16473a7c"</td>
+<td>"0x0c5bbf69aa57350a80b75c217bddfc3063a28735"</td>
+<td>"0x2fa06cd099a5bf23002d6e4eb0c3ac9a42c93664"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>16799830</td>
+<td>2</td>
+<td>"0x8d41a4e22e160bc871fbe53d3f8a79b5b8cd6ffecce38ba23edf10d7fb5030d8"</td>
+<td>"0x7454f0b4ef4eace11005cf650934e46f07d25b22"</td>
+<td>"0xd91a0177d77c1c89bbdff6e976311241b6473495"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="even">
+<td>16799867</td>
+<td>5</td>
+<td>"0xf32470d508e7a7a42896ec9f29e5a4aff491f737fa0014728b3f09f05ebb6af3"</td>
+<td>"0x4601bde5430715927ed23d0095d2432b6b18d56f"</td>
+<td>"0xd9165557ac4f733dbd2e6e5e86796b839fd4e16c"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>16799878</td>
+<td>1</td>
+<td>"0xdc076bce0201717aa60cb84c4d61c971c52bef52541f995a99f5482cb5b7523a"</td>
+<td>"0xa7afb1b166f092cda4e8e65d46d62fadb05f8c87"</td>
+<td>"0xfb1c38c669ff97cf98ba0227625af8c874e5aa2e"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="even">
+<td>16799902</td>
+<td>2</td>
+<td>"0xd8c04117b57274211a1dc0b6b2cb2686bf48f839c1349f81919dbd785c921f52"</td>
+<td>"0xedcc876b4fd37c7c17aa0ceb185878ba99482d61"</td>
+<td>"0x3f5baf7b0601ba072f3e46fbc3b71a8ee5ccf937"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>16799912</td>
+<td>1</td>
+<td>"0xa53d62e00b7e71ceeaa88d38f130c3c85e4d230ff157b652ba316df58499bcf7"</td>
+<td>"0x07551f8b561881246f1c28e5dd54224996bd00e9"</td>
+<td>"0x121ef1dcf2835761f732dbd16d63cab598e4e080"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="even">
+<td>16799917</td>
+<td>2</td>
+<td>"0xb58e2f78c01cadc61b63fcb2f3ee5ac50ae902cfb128a79e7786e905967793c5"</td>
+<td>"0x7b47bf4bdf9c0a6ed63d8c0a288edab5297fd93f"</td>
+<td>"0x549e52757bd263a162d1ec47a32c87cebb2d153f"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+<tr class="odd">
+<td>16799994</td>
+<td>0</td>
+<td>"0xe2e1d4ed80813c585b61299256e29b231523696cf3435222d304802bd83201ec"</td>
+<td>"0xe27d90587ee4dcbf8c591c63d9160c3249f35860"</td>
+<td>"0xf8392c87cb95bd635c833131229029469613d4bd"</td>
+<td>"0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"</td>
+<td>"0x60806040526001600c5534801561001557600080fd5b506040514690806052612d2...</td>
+<td>"0x608060405234801561001057600080fd5b50600436106101b95760003560e01c806...</td>
+<td>"0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"</td>
+<td>"0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5"</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

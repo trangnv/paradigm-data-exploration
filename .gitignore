@@ -24,3 +24,6 @@ data/*
 extras_ignore/*
 venv/
 */.ipynb_checkpoints
+
+/.quarto/
+/_site/
